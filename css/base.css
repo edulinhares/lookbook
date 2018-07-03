@@ -226,6 +226,10 @@ img.loading {
   margin: 30px 0;
   cursor: pointer;
 }
+.preview img {
+  opacity: 1;
+  transition: opacity .4s ease-in-out;
+}
 .preview span {
   position: absolute;
   top: 0;
@@ -241,6 +245,17 @@ img.loading {
   color: #fff;
   text-transform: uppercase;
   display: block;
+  z-index: 999;
+  transition: all .4s ease-in-out;
+}
+
+.preview:hover img {
+  opacity: 0.4;
+}
+.preview:hover span {
+  background-color: transparent;
+  font-size: 15px;
+  color: #000;
 }
 
 .btn-close {
@@ -329,14 +344,32 @@ footer {
 }
 
 .bg-stars {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
   background-color: #000;
   background-image: radial-gradient(#ffffff, rgba(255, 255, 255, 0.2) 2px, rgba(0, 0, 0, 0) 10px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 1px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 1px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 4px);
   background-size: 500px 500px,270px 110px,380px 310px,170px 150px;
   background-position: 41px -20px,10px 105px,170px -130px,30px -90px,60px 100px,40px 60px,-34px 26px,-36px -22px;
   animation: h 4s ease-in infinite forwards;
+}
+
+.footer-content {
+  z-index: 2;
+  position: relative;
+}
+
+.nav-star {
+  position: relative;
   padding-bottom: 30px;
 }
-.bg-stars .nav-footer {
+.nav-star .nav-footer {
   display: flex;
   width: 100%;
   padding: 100px 0 30px;
@@ -346,53 +379,53 @@ footer {
   margin: 0 auto;
   text-transform: uppercase;
 }
-.bg-stars .nav-footer div:last-child {
+.nav-star .nav-footer div:last-child {
   border-left: 1px solid #444;
   padding-left: 50px;
   height: 100%;
 }
-.bg-stars .nav-footer p {
+.nav-star .nav-footer p {
   font-size: 13px;
   font-weight: 700;
   margin-bottom: 10px;
   letter-spacing: .5px;
 }
-.bg-stars .nav-footer ul {
+.nav-star .nav-footer ul {
   margin-bottom: 30px;
 }
-.bg-stars .nav-footer li {
+.nav-star .nav-footer li {
   margin-bottom: 5px;
 }
-.bg-stars .nav-footer a {
+.nav-star .nav-footer a {
   text-align: left;
   color: #bbb8b8;
   font-size: 13px;
 }
-.bg-stars .nav-footer a.star-wars-footer {
+.nav-star .nav-footer a.star-wars-footer {
   color: #fadc00;
 }
-.bg-stars .nav-footer .social-menu-footer {
+.nav-star .nav-footer .social-menu-footer {
   display: flex;
   justify-content: space-around;
   padding-top: 5px;
 }
-.bg-stars .nav-footer .ic-fb {
+.nav-star .nav-footer .ic-fb {
   width: 7px;
   height: 13px;
 }
-.bg-stars .nav-footer .ic-insta {
+.nav-star .nav-footer .ic-insta {
   width: 13px;
   height: 13px;
 }
-.bg-stars .nav-footer .ic-pint {
+.nav-star .nav-footer .ic-pint {
   width: 10px;
   height: 13px;
 }
-.bg-stars .nav-footer .ic-vimeo {
+.nav-star .nav-footer .ic-vimeo {
   width: 16px;
   height: 13px;
 }
-.bg-stars .star-wars {
+.nav-star .star-wars {
   display: flex;
   padding: 30px 0 0;
   border-top: 1px solid #444;
@@ -401,7 +434,7 @@ footer {
   margin-right: auto;
   margin-bottom: 60px;
 }
-.bg-stars .star-wars div {
+.nav-star .star-wars div {
   flex: 1;
   width: 50%;
   margin: 0 10px;
@@ -411,19 +444,19 @@ footer {
   justify-content: center;
   align-items: center;
 }
-.bg-stars .star-wars div:nth-child(2) {
+.nav-star .star-wars div:nth-child(2) {
   flex: 2;
   max-width: 295px;
   padding: 0 10px;
 }
-.bg-stars .star-wars div:last-child img {
+.nav-star .star-wars div:last-child img {
   margin: 10px 0;
 }
-.bg-stars .star-wars .star-wars-logo {
+.nav-star .star-wars .star-wars-logo {
   width: 80px;
   height: 111px;
 }
-.bg-stars .star-wars p {
+.nav-star .star-wars p {
   text-transform: uppercase;
   text-align: center;
   color: #fff;
@@ -432,7 +465,7 @@ footer {
   line-height: 18px;
   font-size: 14px;
 }
-.bg-stars .star-wars a {
+.nav-star .star-wars a {
   background: #fadc00;
   padding: 10px;
   color: #000;
@@ -445,7 +478,7 @@ footer {
   transition: .4s ease;
   font-size: 13px;
 }
-.bg-stars .star-wars a:hover {
+.nav-star .star-wars a:hover {
   background: #c3ac03;
   color: #fff;
 }
@@ -527,4 +560,42 @@ footer {
 .consumer-nav a {
   font-size: 11px;
   color: #bbb8b8;
+}
+
+@media (max-width: 767px) {
+  header {
+    height: 90px;
+  }
+  header nav {
+    display: none;
+  }
+
+  .breadcrumb {
+    margin-top: 95px;
+  }
+
+  .user-cart p {
+    float: none;
+    text-align: center;
+    line-height: 24px;
+  }
+  .user-cart div {
+    float: none;
+    text-align: center;
+  }
+
+  .bg-stars {
+    display: none;
+  }
+}
+@keyframes h {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .2;
+  }
+  100% {
+    opacity: 1;
+  }
 }
