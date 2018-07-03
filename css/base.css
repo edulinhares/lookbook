@@ -1,0 +1,530 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "futura-pt", sans-serif;
+  color: #61666a;
+}
+
+a, a:hover, a:active, a:visited {
+  color: #61666a;
+  text-decoration: none;
+}
+
+.clearfix {
+  clear: both;
+  float: none !important;
+}
+
+::placeholder {
+  text-transform: uppercase;
+}
+
+h2 {
+  text-align: center;
+  margin: 20px 0 50px;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+}
+
+h3 {
+  text-align: center;
+  font-size: 18px;
+  color: #4a4a4a;
+  margin: 25px auto;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.top-bar {
+  min-height: 35px;
+  background-color: #61666a;
+  color: #FFF;
+  position: relative;
+  width: 100%;
+}
+.top-bar p {
+  text-align: center;
+  line-height: 35px;
+  vertical-align: middle;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+.top-bar .free-shipping-icon {
+  right: 5px;
+  top: 0;
+  position: absolute;
+  height: 32px;
+  border-bottom: 3px solid #2db7a6;
+}
+.top-bar .free-shipping-icon img {
+  width: 30px;
+  height: 30px;
+  margin-top: 2px;
+}
+
+.user-cart {
+  padding: 1px 40px;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: #61666a;
+}
+.user-cart p {
+  float: left;
+  line-height: 24px;
+}
+.user-cart div {
+  float: right;
+}
+.user-cart .btn-user {
+  background: url("../img/svg/ic-user.svg") no-repeat right center;
+  padding: 3px 15px;
+  margin-right: 5px;
+}
+.user-cart .btn-cart {
+  display: inline-block;
+  background: url("../img/svg/ic-cart.svg") no-repeat right center;
+  background-size: 16px 13px;
+  padding: 3px 15px 3px 15px;
+}
+.user-cart .btn-cart span {
+  background-color: #2db7a6;
+  color: #FFF;
+  margin: 0 5px;
+  border-radius: 50%;
+  font-weight: 700;
+  line-height: 18px;
+  height: 18px;
+  width: 18px;
+  text-align: center;
+  display: inline-block;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 997;
+  width: 100%;
+  margin: 0;
+  background: rgba(255, 255, 255, 0.98);
+  height: 145px;
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+header nav ul li {
+  margin: 0 15px;
+}
+header nav ul li a {
+  text-transform: uppercase;
+  font-size: 13px;
+}
+header nav ul li:first-child {
+  margin-left: 5%;
+}
+header .dropdown {
+  display: flex;
+  align-items: center;
+}
+header .dropdown img {
+  margin-left: 2px;
+}
+header .star-wars-header {
+  font-weight: bold;
+}
+
+.breadcrumb {
+  padding: 0 40px;
+  font-size: 12px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 150px;
+  line-height: 40px;
+}
+.breadcrumb ul {
+  display: flex;
+  align-items: center;
+}
+.breadcrumb li:not(:first-child):before {
+  content: "\002F";
+  margin: 0 1em;
+  color: #aaa;
+}
+.breadcrumb li {
+  color: #aaa;
+}
+.breadcrumb li:last-child {
+  color: #61666a;
+}
+
+.lookbooks {
+  text-align: center;
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.book {
+  position: relative;
+}
+.book img {
+  width: 100%;
+}
+
+img.loading {
+  background: transparent url("../img/loader.gif") center no-repeat;
+}
+
+.preview {
+  position: relative;
+  margin: 30px 0;
+  cursor: pointer;
+}
+.preview span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 175px;
+  height: 34px;
+  line-height: 34px;
+  font-size: 13px;
+  background-color: #000;
+  color: #fff;
+  text-transform: uppercase;
+  display: block;
+}
+
+.btn-close {
+  width: 100%;
+  position: sticky;
+  background-color: #FFF;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-size: 14px;
+  padding-top: 15px;
+}
+
+.close-triangle {
+  cursor: pointer;
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 17.3px;
+  border-color: transparent transparent #aaa;
+  margin: 0 auto;
+}
+
+.opened {
+  display: none;
+  position: relative;
+}
+
+.book-divisor {
+  margin: 0 auto 70px;
+  border-color: #eee;
+}
+
+footer {
+  background: #000;
+  color: #fff;
+  padding: 50px 0;
+  margin-top: 50px;
+}
+
+.email h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #FFF;
+}
+.email p {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 21px;
+}
+.email form {
+  max-width: 380px;
+  background-color: #FFF;
+  margin: 20px auto;
+  display: flex;
+}
+.email form input {
+  border: 0;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "futura-pt", sans-serif;
+  width: 38%;
+}
+.email form button {
+  cursor: pointer;
+  background: #666;
+  border: 0;
+  color: #fff;
+  padding: 10px 30px;
+  border: 5px solid #fff;
+  transition: all .3s;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-family: "futura-pt", sans-serif;
+}
+.email form button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #000;
+}
+
+.bg-stars {
+  background-color: #000;
+  background-image: radial-gradient(#ffffff, rgba(255, 255, 255, 0.2) 2px, rgba(0, 0, 0, 0) 10px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 1px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 1px, rgba(0, 0, 0, 0) 5px), radial-gradient(#ffffff, rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 5px), radial-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.1) 2px, rgba(0, 0, 0, 0) 4px);
+  background-size: 500px 500px,270px 110px,380px 310px,170px 150px;
+  background-position: 41px -20px,10px 105px,170px -130px,30px -90px,60px 100px,40px 60px,-34px 26px,-36px -22px;
+  animation: h 4s ease-in infinite forwards;
+  padding-bottom: 30px;
+}
+.bg-stars .nav-footer {
+  display: flex;
+  width: 100%;
+  padding: 100px 0 30px;
+  justify-content: space-around;
+  flex-basis: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+.bg-stars .nav-footer div:last-child {
+  border-left: 1px solid #444;
+  padding-left: 50px;
+  height: 100%;
+}
+.bg-stars .nav-footer p {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: .5px;
+}
+.bg-stars .nav-footer ul {
+  margin-bottom: 30px;
+}
+.bg-stars .nav-footer li {
+  margin-bottom: 5px;
+}
+.bg-stars .nav-footer a {
+  text-align: left;
+  color: #bbb8b8;
+  font-size: 13px;
+}
+.bg-stars .nav-footer a.star-wars-footer {
+  color: #fadc00;
+}
+.bg-stars .nav-footer .social-menu-footer {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 5px;
+}
+.bg-stars .nav-footer .ic-fb {
+  width: 7px;
+  height: 13px;
+}
+.bg-stars .nav-footer .ic-insta {
+  width: 13px;
+  height: 13px;
+}
+.bg-stars .nav-footer .ic-pint {
+  width: 10px;
+  height: 13px;
+}
+.bg-stars .nav-footer .ic-vimeo {
+  width: 16px;
+  height: 13px;
+}
+.bg-stars .star-wars {
+  display: flex;
+  padding: 30px 0 0;
+  border-top: 1px solid #444;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+}
+.bg-stars .star-wars div {
+  flex: 1;
+  width: 50%;
+  margin: 0 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bg-stars .star-wars div:nth-child(2) {
+  flex: 2;
+  max-width: 295px;
+  padding: 0 10px;
+}
+.bg-stars .star-wars div:last-child img {
+  margin: 10px 0;
+}
+.bg-stars .star-wars .star-wars-logo {
+  width: 80px;
+  height: 111px;
+}
+.bg-stars .star-wars p {
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 10px;
+  margin-top: 0;
+  line-height: 18px;
+  font-size: 14px;
+}
+.bg-stars .star-wars a {
+  background: #fadc00;
+  padding: 10px;
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  transition: .4s ease;
+  font-size: 13px;
+}
+.bg-stars .star-wars a:hover {
+  background: #c3ac03;
+  color: #fff;
+}
+
+.footer-widget {
+  margin: 15px auto !important;
+  height: auto;
+  max-width: 350px;
+}
+.footer-widget .logo-footer {
+  margin: 0 auto 40px;
+  display: block;
+}
+.footer-widget .text-footer {
+  text-align: justify;
+  max-width: 300px;
+  margin: 10px auto;
+  color: #bbb8b8;
+  font-size: 14px;
+  line-height: 21px;
+}
+.footer-widget .text-footer p {
+  margin: 10px 0;
+}
+.footer-widget .text-footer p:last-child {
+  font-weight: bold;
+  text-align: left;
+}
+.footer-widget hr {
+  max-width: 300px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  background: #737373;
+  width: 100%;
+  border-color: rgba(196, 196, 196, 0.24);
+  border-bottom: 0;
+}
+.footer-widget .copyright, .footer-widget .address {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.payment {
+  margin-top: 60px;
+  justify-content: center;
+  display: flex;
+}
+.payment img {
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+}
+
+.security {
+  margin: 60px 0;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+.security a {
+  margin: 0 15px;
+}
+.security .pci {
+  width: 50px;
+  height: 45px;
+}
+
+.consumer-nav ul {
+  display: flex;
+  text-transform: none;
+  justify-content: center;
+}
+.consumer-nav li:not(:last-child):after {
+  content: "\007C";
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.consumer-nav a {
+  font-size: 11px;
+  color: #bbb8b8;
+}
